@@ -19,7 +19,6 @@ div{
     height:60px;
     background-color:gray;
     border:gray;
-    font-family:微軟正黑體;
     font-size:200%;
     color:white;
 }
@@ -27,4 +26,23 @@ div div button{
     height:60px;
     background-color:gray;
     border:gray
+}
+
+.container{
+    padding:20px;
+    width:400px;
+    text-align:center;
+    background-color:#6495ED;
+}
+
+#title {
+    font-size:300%;
+    color:white
+}
+
+#display-area{
+    opacity:0.6;
+    background-color:#FFD382;
+    width:1200px;
+    height:1000px;
 }

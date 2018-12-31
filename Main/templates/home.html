@@ -2,72 +2,61 @@
 {% load static %}
 
 <html lang="en">
-<head>
-  <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
-  <meta charset="UTF-8"> <!--可以顯示中文字體-->
-  <title>早午餐店產銷資訊系統</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
-<body>
-  <div>
-    <div class="btn-group btn-group-justified">
-      <a href="http://127.0.0.1:8000/PMS/" class="btn btn-primary" id="top-menu">
-        <b>首頁</b></a>
-      <div class="btn-group">
-          <button type="button" class="btn btn-primary dropdown-toggle" id="top-menu" data-toggle="dropdown">
-          <b>銷售統計<span class="caret"></b></button>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="index8-3.htm">分頁一</a></li>
-            <li><a href="index8-7.htm">分頁二</a></li>
-          </ul>
+  <head>
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    <meta charset="UTF-8"> <!--可以顯示中文字體-->
+    <title>早午餐店產銷資訊系統</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div>
+      <div class="btn-group btn-group-justified">
+        <a href="http://127.0.0.1:8000/PMS/" class="btn btn-primary" id="top-menu">
+          <b>首頁</b></a>
+        <div class="btn-group">
+            <button type="button" class="btn btn-primary dropdown-toggle" id="top-menu" data-toggle="dropdown">
+            <b>銷售統計<span class="caret"></b></button>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="index8-3.htm">分頁一</a></li>
+              <li><a href="index8-7.htm">分頁二</a></li>
+            </ul>
+        </div>
+        <div class="btn-group">
+            <button type="button" class="btn btn-primary dropdown-toggle" id="top-menu" data-toggle="dropdown">
+            <b>顧客分析<span class="caret"></b></span></button>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="index8-3.htm">分頁一</a></li>
+              <li><a href="index8-7.htm">分頁二</a></li>
+            </ul>
+        </div>
+        <div class="btn-group">
+            <button type="button" class="btn btn-primary dropdown-toggle" id="top-menu" data-toggle="dropdown">
+            <b>作業管理<span class="caret"></b></span></button>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="index8-4.htm">分頁一</a></li>
+            </ul>
+        </div>
       </div>
-      <div class="btn-group">
-          <button type="button" class="btn btn-primary dropdown-toggle" id="top-menu" data-toggle="dropdown">
-          <b>顧客分析<span class="caret"></b></span></button>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="index8-3.htm">分頁一</a></li>
-            <li><a href="index8-7.htm">分頁二</a></li>
-          </ul>
-      </div>
-      <div class="btn-group">
-          <button type="button" class="btn btn-primary dropdown-toggle" id="top-menu" data-toggle="dropdown">
-          <b>作業管理<span class="caret"></b></span></button>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="index8-4.htm">分頁一</a></li>
-          </ul>
-      </div>
-  </div>
+    </div>
+    <img src="/static/Logo.png" class="center">
+    <div class="container">
+      <b id=title>早午餐店<br>產銷資訊系統</b>
+    </div>
+    <div id="display-area">
 
-  <br>
 
-  <img src="/static/Logo.png" class="center">
+      {% for i in memberList %}
+        <p> {{i.name}} {{i.age}} 歲</p>
+      {% endfor %}
 
-  <br>
+      {% for i in productList %}
+        <p> {{i.name}} {{i.price}} 元</p>
+      {% endfor %}
 
-  <div class="container" style="padding:20px;width:400px;text-align:center;background-color:#6495ED">
-  <b style="font-family:微軟正黑體;font-size:300%;color:white">早午餐店<br>產銷資訊系統</b>
-  </div>
 
-  <br>
-
-  <div style="opacity:0.6;background-color:#FFD382;width:1200px;height:1000px;">
-
-  <!--
-    {% for i in memberList %}
-      <p> {{i.name}} {{i.age}} 歲</p>
-    {% endfor %}
-
-    {% for i in productList %}
-      <p> {{i.name}} {{i.price}} 元</p>
-    {% endfor %}
-  -->
-
-  </div>
-  <br>
-  <marquee behavior="scroll" direction="left">請勿複製程式碼！</marquee>
-  <br>
-</body>
+    </div>
+  </body>
 </html>
