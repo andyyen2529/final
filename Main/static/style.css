@@ -9,23 +9,83 @@ body{
 div{
     margin:0px auto;
 }
+
 .center {
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
 
-#top-menu{
-    height:60px;
-    background-color:gray;
-    border:gray;
-    font-size:200%;
-    color:white;
+nav {
+    margin: auto;
+    text-align: center;
 }
-div div button{
-    height:60px;
-    background-color:gray;
-    border:gray
+
+nav ul {
+    background: gray;
+    list-style: none;
+    position: relative;
+    display: inline-table;
+    width: 100%;
+}
+
+nav ul li {
+    float: left;
+}
+
+nav ul li:after{
+    content: "";
+    clear: both;
+    display: block;
+}
+
+nav ul li:hover{
+    background: #4b545f;
+}
+
+nav ul li:hover a{
+    color: white;
+}
+
+nav ul li:hover > ul{
+    display: block;
+}
+
+nav ul li a{
+    color: white;
+    font-size: x-large;
+    text-decoration: none;
+    display: block;
+    padding: 0 2em 0 2em;
+}
+
+nav ul ul{
+    display: none;
+    position: absolute;
+    top: 100%;
+    padding: 0 1em;
+    width: auto;
+}
+
+nav ul ul li{
+    float: none;
+    position: relative;
+    font-size: x-large;
+    color: #fff;
+}
+
+nav ul ul li a{
+    padding: 15px 40px;
+}
+
+nav ul ul li a:hover{
+    background: #4b545f;
+}
+
+nav ul ul ul {
+    position: absolute;
+    left: 100%;
+    top:0;
 }
 
 .container{
