@@ -23,8 +23,8 @@ def PMS(request):
         'hi': 'jeifj;fijfil',
     })
     """
-    memberList = member.objects.all()
-    productList = product.objects.all()
+    memberList = member()
+    productList = product()
     return render(request, 'home.html', context={
         'memberList': memberList,
         'productList': productList
