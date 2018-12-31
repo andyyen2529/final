@@ -1,9 +1,10 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import Customer, Order
+from .models import member, product
 
 # Create your views here.
-def index(request):
+def PMS(request):
+    """
     customer = Customer.objects.get(id=1) #只取一個
     print(customer)
     order = Order(price=100,customer=customer)
@@ -19,6 +20,14 @@ def index(request):
         'customerList': customerList,
         'hi': 'jeifj;fijfil',
     })
+    """
+    memberList = member.objects.all()
+    productList = product.objects.all()
+    return render(request, 'home.html', context={
+        'memberList': memberList,
+        'productList': productList
+    })
 
-def hi(request):
+
+def customerAnalysis(request):
     return HttpResponse("你靠邀")
