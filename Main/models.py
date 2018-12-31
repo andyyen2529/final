@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from django.db import models
 #一般的實體
 class member(models.Model): #會員
