@@ -23,13 +23,12 @@ def PMS(request):
         'hi': 'jeifj;fijfil',
     })
     """
-    memberList = member()
-    productList = product()
+    memberList = member.objects.all()
+    productList = product.objects.all()
     return render(request, 'home.html', context={
         'memberList': memberList,
         'productList': productList
     })
-
 
 def customerAnalysis(request):
     return HttpResponse("你靠邀")
