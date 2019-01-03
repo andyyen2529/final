@@ -20,7 +20,7 @@ def PMS(request):
     print('ji')
     return render(request, 'hi.html', context={
         'customerList': customerList,
-        'hi': 'jeifj;fijfil',
+        'hi': 'jeifj;fijfil',嗨ㄏ嗨我是小鑫鑫
     })
     """
     memberList = member.objects.all()
